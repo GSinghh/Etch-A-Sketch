@@ -6,7 +6,7 @@ const divContainer = document.getElementById('div-container');
 const gridNumber = document.getElementById('grid-number');
 
 numSlider.addEventListener("input", addDivs);
-eraserMode.addEventListener("click",changeColor);
+eraserMode.addEventListener("click",getColor);
 
 function addDivs()
 {
@@ -22,18 +22,18 @@ function addDivs()
         const box = document.createElement('div');
         const flexBasis = `calc(${100 / numSlider.value}%)`;
         box.className = 'box';
+        box.addEventListener('mouseenter', getColor)
         box.style.flexBasis = flexBasis;
         divContainer.appendChild(box);
     }
 }
 
-function changeColor(event)
+function getColor(event)
 {
     /* Depending on the object that calls this function, 
     we will know whether we're changing the color to the color from the selector
     RGB or the eraser */
-
-
+    console.log("Teri Maa Di Fudi");
 }
 
 function eraser()

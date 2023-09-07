@@ -100,3 +100,8 @@
     font-size: 18px;
     box-sizing: border-box; /* Include padding and border in the element's total width */
 }
+#color-selecter
+{
+    -webkit-appearance: none;
+    border-radius: 5px;
+}
